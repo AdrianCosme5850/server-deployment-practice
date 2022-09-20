@@ -1,12 +1,7 @@
 'use strict';
 
-const express = require('express');
-const app = express();
+require('dotenv').config();
+const app = require('./server.js');
+const PORT = process.env.PORT || 3002;  
 
-app.get('/hello', (request, response) => {
-    response.json({
-        name: 'Adrian'
-    })
-});
-
-module.exports = app;
+app.listen(PORT, () => {console.log('listen on ' + PORT);})

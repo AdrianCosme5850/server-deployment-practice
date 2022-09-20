@@ -1,7 +1,7 @@
 'use strict';
 
 const supertest = require('supertest');
-const app = require('../index.js');
+const app = require('../server.js');
 const request = supertest(app);
 
 describe('Testing out hello path', () => {
